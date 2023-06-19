@@ -2,6 +2,7 @@ package net.galiev.megaparkour.config
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.encodeToJsonElement
+import net.galiev.megaparkour.parkour.Parkour
 import java.io.File
 import java.nio.file.Paths
 
@@ -22,5 +23,9 @@ object ConfigManager {
 
     fun read(): Config {
         return json.decodeFromString(configFile.readText())
+    }
+
+    fun write(parkour: Parkour) {
+        configFile.writeText(json.encodeToJsonElement(parkour).toString())
     }
 }

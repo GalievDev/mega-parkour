@@ -1,10 +1,11 @@
 package net.galiev.megaparkour.parkour
 
-import net.galiev.megaparkour.config.ConfigManager
+import kotlinx.serialization.Serializable
 import net.galiev.megaparkour.config.ConfigManager.read
 import net.minecraft.entity.SpawnRestriction.Location
 
-data class Parkour(
+@Serializable
+class Parkour(
         private var name: String,
         private var author: String = "unknown",
         private var active: Boolean = false,
