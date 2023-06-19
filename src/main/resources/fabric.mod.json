@@ -5,42 +5,38 @@
   "name": "${modName}",
   "description": "${modDescription}",
   "authors": [
-    "Syorito Hatsuki"
+    "Galiev"
   ],
   "contact": {
-    "homepage": "https://syorito-hatsuki.dev/",
-    "issues": "https://github.com/syorito-hatsuki/${modId}/issues",
-    "sources": "https://github.com/syorito-hatsuki/${modId}"
+    "homepage": "https://galievdev.github.io",
+    "issues": "https://github.com/galievdev/${modId}/issues",
+    "sources": "https://github.com/galievdev/${modId}"
   },
   "license": "MIT Licence",
-  "icon": "assets/${modId}/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
       {
         "adapter": "kotlin",
-        "value": "dev.syoritohatsuki.${modId}.TemplateMod"
+        "value": "net.galiev.megaparkour.MegaParkour"
       }
     ]
   },
   "custom": {
     "modmenu": {
-      "links": {
-        "modmenu.discord": "https://discord.gg/pbwnMwnUD6"
-      },
       "badges": [],
       "update_checker": true
     },
     "mcb": [
       {
-        "name": "Ducky House",
-        "fillColor": -13730510,
-        "outlineColor": -11751600
+        "name": "Galiev Dev",
+        "fillColor": -1275044945,
+        "outlineColor": -100639825
       }
     ]
   },
   "mixins": [
-    "${modId}.mixins.json"
+    "megaparkour.mixins.json"
   ],
   "depends": {
     "fabric": "*",
